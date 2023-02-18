@@ -1,0 +1,2382 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/14/2023 10:07:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-5AEKJLK1"
+  DTS:CreatorName="LAPTOP-5AEKJLK1\HI"
+  DTS:DTSID="{40E4D34A-2E58-4164-8B77-38FF80ACADE6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1066"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{7C227B0E-E03C-47B3-955B-40AE21A2F62C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3D42DB52-474B-42E9-96CC-8990FE58EBF4}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\DATA ANALYST\SQL LEVEL 2\DATA.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{88A2FB04-E94E-4D71-BC37-3C13DC2987C6}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\DATA ANALYST\SQL LEVEL 2\BT lớn\DATA.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B49223F3-A1B9-416D-961D-96C1D9EE8016}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\DATA ANALYST\SQL LEVEL 2\BT lớn\DATA.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F734FB37-2CDA-4591-85C7-25E63978CD2E}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\DATA ANALYST\SQL LEVEL 2\BT lớn\DATA.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{52779FC3-08E7-4083-B547-1276246EEC56}"
+      DTS:ObjectName="LAPTOP-5AEKJLK1\SQLEXPRESS.MCI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-5AEKJLK1\SQLEXPRESS;Initial Catalog=MCI;Integrated Security=True;Application Name=SSIS-Package-{52779FC3-08E7-4083-B547-1276246EEC56}LAPTOP-5AEKJLK1\SQLEXPRESS.MCI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{8F306502-5A55-45C7-BD54-4AEFEBD8908D}"
+      DTS:ObjectName="LAPTOP-5AEKJLK1\SQLEXPRESS.MCI 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-5AEKJLK1\SQLEXPRESS;Initial Catalog=MCI;Integrated Security=True;Application Name=SSIS-Package-{8F306502-5A55-45C7-BD54-4AEFEBD8908D}LAPTOP-5AEKJLK1\SQLEXPRESS.MCI 1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ThongTinQuan"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{936D0F23-F0CB-4789-B525-CBEA10FA9C88}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ThongTinQuan"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ThongTinQuan\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."ThongTinQuan"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ThongTinQuan\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Mã số]"
+                      cachedDataType="r8"
+                      cachedName="Mã số"
+                      externalMetadataColumnId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MaSo]"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Mã số]" />
+                    <inputColumn
+                      refId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Tên quận]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Tên quận"
+                      externalMetadataColumnId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TenQuan]"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Tên quận]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MaSo]"
+                      dataType="r8"
+                      name="MaSo" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TenQuan]"
+                      dataType="wstr"
+                      length="255"
+                      name="TenQuan" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinQuan\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinQuan\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinQuan\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinQuan\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinQuan\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinQuan\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ThongTinQuan\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinQuan\Conditional Split.Inputs[Conditional Split Input].Columns[Mã số]"
+                      cachedDataType="r8"
+                      cachedName="Mã số"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Mã số]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinQuan\Conditional Split.Outputs[NeuMaSoNULL]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NeuMaSoNULL"
+                  synchronousInputId="Package\ThongTinQuan\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Mã số]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([Mã số])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinQuan\Conditional Split.Outputs[NeuMaSoKhongNULL]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NeuMaSoKhongNULL"
+                  synchronousInputId="Package\ThongTinQuan\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinQuan\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ThongTinQuan\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinQuan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinQuan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinQuan\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Quan$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ThongTinQuan\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Mã số]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mã số]"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Mã số]"
+                      name="Mã số"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Tên quận]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].ExternalColumns[Tên quận]"
+                      length="255"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].Columns[Tên quận]"
+                      name="Tên quận"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mã số]"
+                      dataType="r8"
+                      name="Mã số" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output].ExternalColumns[Tên quận]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tên quận" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[Mã số]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[Mã số]"
+                      name="Mã số" />
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[Tên quận]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[Tên quận]"
+                      name="Tên quận" />
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinQuan\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\ThongTinQuan\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinQuan\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ThongTinQuan\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinQuan\Multicast.Outputs[Multicast Output 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\ThongTinQuan\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinQuan\Multicast 1"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast 1">
+              <inputs>
+                <input
+                  refId="Package\ThongTinQuan\Multicast 1.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinQuan\Multicast 1.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ThongTinQuan\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ThongTinQuan.Paths[Excel Source Output]"
+              endId="Package\ThongTinQuan\Conditional Split.Inputs[Conditional Split Input]"
+              name="Excel Source Output"
+              startId="Package\ThongTinQuan\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\ThongTinQuan.Paths[Multicast Output 1]"
+              endId="Package\ThongTinQuan\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\ThongTinQuan\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\ThongTinQuan.Paths[NeuMaSoKhongNULL]"
+              endId="Package\ThongTinQuan\Multicast.Inputs[Multicast Input 1]"
+              name="NeuMaSoKhongNULL"
+              startId="Package\ThongTinQuan\Conditional Split.Outputs[NeuMaSoKhongNULL]" />
+            <path
+              refId="Package\ThongTinQuan.Paths[NeuMaSoNULL]"
+              endId="Package\ThongTinQuan\Multicast 1.Inputs[Multicast Input 1]"
+              name="NeuMaSoNULL"
+              startId="Package\ThongTinQuan\Conditional Split.Outputs[NeuMaSoNULL]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ThongTinThiSinh"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2E32C667-4E43-4303-BF4A-DBAB2F0E00AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ThongTinThiSinh"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ThongTinThiSinh\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."ThongTinThiSinh"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ThongTinThiSinh\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI 1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[sbd]"
+                      cachedDataType="r8"
+                      cachedName="sbd"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SBD]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[sbd]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Ho]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Ho"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Ho]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Ho]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Ten]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Ten"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Ten]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Ten]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[MaTruong]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MaTruong"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MaTruong]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[TenTruong]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TenTruong"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TenTruong]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[TenTruong]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Quan]"
+                      cachedDataType="r8"
+                      cachedName="Quan"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Quan]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Quan]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Mon1]"
+                      cachedDataType="r8"
+                      cachedName="Mon1"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mon1]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon1]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Mon2]"
+                      cachedDataType="r8"
+                      cachedName="Mon2"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mon2]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon2]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Mon3]"
+                      cachedDataType="r8"
+                      cachedName="Mon3"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mon3]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon3]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[NV1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NV1"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NV1]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV1]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[NV2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NV2"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NV2]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV2]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[NV3]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NV3"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NV3]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV3]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[NVTrungTuyen]"
+                      cachedDataType="r8"
+                      cachedName="NVTrungTuyen"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NVTrungTuyen]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NVTrungTuyen]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[TongDiem3Mon]"
+                      cachedDataType="r8"
+                      cachedName="TongDiem3Mon"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TongDiem3Mon]"
+                      lineageId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Output].Columns[TongDiem3Mon]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SBD]"
+                      dataType="r8"
+                      name="SBD" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Ho]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ho" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Ten]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ten" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MaTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="MaTruong" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TenTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="TenTruong" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Quan]"
+                      dataType="r8"
+                      name="Quan" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mon1]"
+                      dataType="r8"
+                      name="Mon1" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mon2]"
+                      dataType="r8"
+                      name="Mon2" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mon3]"
+                      dataType="r8"
+                      name="Mon3" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NV1]"
+                      dataType="wstr"
+                      length="255"
+                      name="NV1" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NV2]"
+                      dataType="wstr"
+                      length="255"
+                      name="NV2" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NV3]"
+                      dataType="wstr"
+                      length="255"
+                      name="NV3" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NVTrungTuyen]"
+                      dataType="r8"
+                      name="NVTrungTuyen" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TongDiem3Mon]"
+                      dataType="r8"
+                      name="TongDiem3Mon" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinThiSinh\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinThiSinh\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ThongTinThiSinh\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\Conditional Split.Inputs[Conditional Split Input].Columns[sbd]"
+                      cachedDataType="r8"
+                      cachedName="sbd"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[sbd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinThiSinh\Conditional Split.Outputs[SBDLaNULL]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="SBDLaNULL"
+                  synchronousInputId="Package\ThongTinThiSinh\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[sbd]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(sbd)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinThiSinh\Conditional Split.Outputs[SBDKhongPhaiNull]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="SBDKhongPhaiNull"
+                  synchronousInputId="Package\ThongTinThiSinh\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinThiSinh\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ThongTinThiSinh\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinThiSinh\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input].Columns[Mon1]"
+                      cachedDataType="r8"
+                      cachedName="Mon1"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon1]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input].Columns[Mon2]"
+                      cachedDataType="r8"
+                      cachedName="Mon2"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon2]" />
+                    <inputColumn
+                      refId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input].Columns[Mon3]"
+                      cachedDataType="r8"
+                      cachedName="Mon3"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon3]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Output].Columns[TongDiem3Mon]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Output].Columns[TongDiem3Mon]"
+                      name="TongDiem3Mon"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon1]} + #{Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon2]} + #{Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon3]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Mon1 + Mon2 + Mon3</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinThiSinh\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">ThiSinh$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ThongTinThiSinh\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[sbd]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[sbd]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[sbd]"
+                      name="sbd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Ho]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ho]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Ho]"
+                      name="Ho"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Ten]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ten]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Ten]"
+                      name="Ten"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[MaTruong]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]"
+                      name="MaTruong"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[TenTruong]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[TenTruong]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[TenTruong]"
+                      name="TenTruong"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Quan]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Quan]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Quan]"
+                      name="Quan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon1]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mon1]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon1]"
+                      name="Mon1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon2]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mon2]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon2]"
+                      name="Mon2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon3]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mon3]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[Mon3]"
+                      name="Mon3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NV1]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV1]"
+                      name="NV1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NV2]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV2]"
+                      name="NV2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV3]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NV3]"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NV3]"
+                      name="NV3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NVTrungTuyen]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NVTrungTuyen]"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].Columns[NVTrungTuyen]"
+                      name="NVTrungTuyen"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[sbd]"
+                      dataType="r8"
+                      name="sbd" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ho]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ho" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ten]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ten" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[MaTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="MaTruong" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[TenTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="TenTruong" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Quan]"
+                      dataType="r8"
+                      name="Quan" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mon1]"
+                      dataType="r8"
+                      name="Mon1" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mon2]"
+                      dataType="r8"
+                      name="Mon2" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mon3]"
+                      dataType="r8"
+                      name="Mon3" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NV1]"
+                      dataType="wstr"
+                      length="255"
+                      name="NV1" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NV2]"
+                      dataType="wstr"
+                      length="255"
+                      name="NV2" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NV3]"
+                      dataType="wstr"
+                      length="255"
+                      name="NV3" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output].ExternalColumns[NVTrungTuyen]"
+                      dataType="r8"
+                      name="NVTrungTuyen" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[sbd]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[sbd]"
+                      name="sbd" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Ho]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Ho]"
+                      name="Ho" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Ten]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Ten]"
+                      name="Ten" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[MaTruong]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[MaTruong]"
+                      name="MaTruong" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[TenTruong]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[TenTruong]"
+                      name="TenTruong" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Quan]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Quan]"
+                      name="Quan" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Mon1]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Mon1]"
+                      name="Mon1" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Mon2]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Mon2]"
+                      name="Mon2" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Mon3]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[Mon3]"
+                      name="Mon3" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NV1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NV1]"
+                      name="NV1" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NV2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NV2]"
+                      name="NV2" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NV3]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NV3]"
+                      name="NV3" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NVTrungTuyen]"
+                      dataType="r8"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[NVTrungTuyen]"
+                      name="NVTrungTuyen" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinThiSinh\SBDKhongNull"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="SBDKhongNull">
+              <inputs>
+                <input
+                  refId="Package\ThongTinThiSinh\SBDKhongNull.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinThiSinh\SBDKhongNull.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\ThongTinThiSinh\SBDKhongNull.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinThiSinh\SBDKhongNull.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ThongTinThiSinh\SBDKhongNull.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinThiSinh\SBDNull"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="SBDNull">
+              <inputs>
+                <input
+                  refId="Package\ThongTinThiSinh\SBDNull.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinThiSinh\SBDNull.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ThongTinThiSinh\SBDNull.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ThongTinThiSinh.Paths[Derived Column Output]"
+              endId="Package\ThongTinThiSinh\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\ThongTinThiSinh\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ThongTinThiSinh.Paths[Excel Source Output]"
+              endId="Package\ThongTinThiSinh\Conditional Split.Inputs[Conditional Split Input]"
+              name="Excel Source Output"
+              startId="Package\ThongTinThiSinh\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\ThongTinThiSinh.Paths[Multicast Output 2]"
+              endId="Package\ThongTinThiSinh\Derived Column.Inputs[Derived Column Input]"
+              name="Multicast Output 2"
+              startId="Package\ThongTinThiSinh\SBDKhongNull.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\ThongTinThiSinh.Paths[SBDKhongPhaiNull]"
+              endId="Package\ThongTinThiSinh\SBDKhongNull.Inputs[Multicast Input 1]"
+              name="SBDKhongPhaiNull"
+              startId="Package\ThongTinThiSinh\Conditional Split.Outputs[SBDKhongPhaiNull]" />
+            <path
+              refId="Package\ThongTinThiSinh.Paths[SBDLaNULL]"
+              endId="Package\ThongTinThiSinh\SBDNull.Inputs[Multicast Input 1]"
+              name="SBDLaNULL"
+              startId="Package\ThongTinThiSinh\Conditional Split.Outputs[SBDLaNULL]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ThongTinTruong"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BA85692E-9BC8-4E65-8713-6DF1CA3F70BC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ThongTinTruong"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ThongTinTruong\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."ThongTinTruong"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ThongTinTruong\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-5AEKJLK1\SQLEXPRESS.MCI]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[MaTruong]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MaTruong"
+                      externalMetadataColumnId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MaTruong]"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]" />
+                    <inputColumn
+                      refId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[TenTruong]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TenTruong"
+                      externalMetadataColumnId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TenTruong]"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[TenTruong]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MaTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="MaTruong" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TenTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="TenTruong" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinTruong\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinTruong\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinTruong\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinTruong\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinTruong\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinTruong\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ThongTinTruong\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ThongTinTruong\Conditional Split.Inputs[Conditional Split Input].Columns[MaTruong]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MaTruong"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinTruong\Conditional Split.Outputs[NeuMaTruongNull]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NeuMaTruongNull"
+                  synchronousInputId="Package\ThongTinTruong\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(MaTruong)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinTruong\Conditional Split.Outputs[NeuMaTruongKhongNull]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NeuMaTruongKhongNull"
+                  synchronousInputId="Package\ThongTinTruong\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinTruong\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ThongTinTruong\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinTruong\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinTruong\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinTruong\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Truong$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ThongTinTruong\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].ExternalColumns[MaTruong]"
+                      length="255"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[MaTruong]"
+                      name="MaTruong"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[TenTruong]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].ExternalColumns[TenTruong]"
+                      length="255"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].Columns[TenTruong]"
+                      name="TenTruong"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].ExternalColumns[MaTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="MaTruong" />
+                    <externalMetadataColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output].ExternalColumns[TenTruong]"
+                      dataType="wstr"
+                      length="255"
+                      name="TenTruong" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[MaTruong]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[MaTruong]"
+                      name="MaTruong" />
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[TenTruong]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[TenTruong]"
+                      name="TenTruong" />
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinTruong\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\ThongTinTruong\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinTruong\Multicast.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ThongTinTruong\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ThongTinTruong\Multicast 1"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast 1">
+              <inputs>
+                <input
+                  refId="Package\ThongTinTruong\Multicast 1.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ThongTinTruong\Multicast 1.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ThongTinTruong\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ThongTinTruong\Multicast 1.Outputs[Multicast Output 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\ThongTinTruong\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ThongTinTruong.Paths[Excel Source Output]"
+              endId="Package\ThongTinTruong\Conditional Split.Inputs[Conditional Split Input]"
+              name="Excel Source Output"
+              startId="Package\ThongTinTruong\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\ThongTinTruong.Paths[Multicast Output 1]"
+              endId="Package\ThongTinTruong\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\ThongTinTruong\Multicast 1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\ThongTinTruong.Paths[NeuMaTruongKhongNull]"
+              endId="Package\ThongTinTruong\Multicast 1.Inputs[Multicast Input 1]"
+              name="NeuMaTruongKhongNull"
+              startId="Package\ThongTinTruong\Conditional Split.Outputs[NeuMaTruongKhongNull]" />
+            <path
+              refId="Package\ThongTinTruong.Paths[NeuMaTruongNull]"
+              endId="Package\ThongTinTruong\Multicast.Inputs[Multicast Input 1]"
+              name="NeuMaTruongNull"
+              startId="Package\ThongTinTruong\Conditional Split.Outputs[NeuMaTruongNull]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{13F719EF-8536-4C84-9A94-6CACF8C49AA6}"
+      DTS:From="Package\ThongTinThiSinh"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\ThongTinTruong" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D1A6A09F-32AC-4B20-86E1-A899C70C5567}"
+      DTS:From="Package\ThongTinTruong"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\ThongTinQuan" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\ThongTinQuan"
+          TopLeft="297.499988178413,182.000001446406" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\ThongTinThiSinh"
+          TopLeft="90.4999966224036,80.0333339256711" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\ThongTinTruong"
+          TopLeft="299.999988079072,84.9333340083228" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="248.099996622404,103.283333966997">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.8999914566679,0"
+              Start="0,0"
+              End="44.3999914566679,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44.3999914566679,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="374.549988128742,126.533334008323">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.4666674380833"
+              Start="0,0"
+              End="0,47.9666674380833">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.9666674380833" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ThongTinQuan">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\ThongTinQuan\Conditional Split"
+          TopLeft="164,128" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\ThongTinQuan\Multicast 1"
+          TopLeft="297,240" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\ThongTinQuan\Multicast"
+          TopLeft="80,241" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\ThongTinQuan\Excel Source"
+          TopLeft="170,33" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\ThongTinQuan\ADO NET Destination"
+          TopLeft="56.6666753424535,331.733333347109" />
+        <EdgeLayout
+          Id="Package\ThongTinQuan.Paths[Excel Source Output]"
+          TopLeft="240.4,74.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.4"
+              Start="0,0"
+              End="0,45.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinQuan.Paths[NeuMaSoKhongNULL]"
+          TopLeft="240.8,169.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.2,71.4"
+              Start="0,0"
+              End="-101.2,63.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7"
+                    Point2="0,35.7"
+                    Point3="-4,35.7" />
+                  <mssgle:LineSegment
+                    End="-97.2,35.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.2,35.7"
+                    Point2="-101.2,35.7"
+                    Point3="-101.2,39.7" />
+                  <mssgle:LineSegment
+                    End="-101.2,63.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-97.54693359375,40.7,93.8938671875,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinQuan.Paths[NeuMaSoNULL]"
+          TopLeft="265.066666666667,169.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.9333333333333,70.4"
+              Start="0,0"
+              End="95.9333333333333,62.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5954639175258" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5954639175258"
+                    Point2="0,28.5954639175258"
+                    Point3="4,28.5954639175258" />
+                  <mssgle:LineSegment
+                    End="91.9333333333333,28.5954639175258" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.9333333333333,28.5954639175258"
+                    Point2="95.9333333333333,28.5954639175258"
+                    Point3="95.9333333333333,32.5954639175258" />
+                  <mssgle:LineSegment
+                    End="95.9333333333333,62.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.0197330729167,33.5954639175258,65.8938671875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinQuan.Paths[Multicast Output 1]"
+          TopLeft="142.933337671227,282.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.1333333471086"
+              Start="0,0"
+              End="0,41.6333333471086">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.6333333471086" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ThongTinQuan\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ThongTinQuan\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ThongTinThiSinh">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="117.6,41.6"
+          Id="Package\ThongTinThiSinh\SBDNull"
+          TopLeft="46.6666648123,247.866668636534" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\ThongTinThiSinh\Conditional Split"
+          TopLeft="137.499994536241,135.200001074473" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\ThongTinThiSinh\Derived Column"
+          TopLeft="319.999987284343,356.200002830823" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\ThongTinThiSinh\ADO NET Destination"
+          TopLeft="310.833320981927,433.400002624194" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\ThongTinThiSinh\SBDKhongNull"
+          TopLeft="323.333320485222,247.866668636534" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\ThongTinThiSinh\Excel Source"
+          TopLeft="150.833327339755,38.1333336363899" />
+        <EdgeLayout
+          Id="Package\ThongTinThiSinh.Paths[SBDLaNULL]"
+          TopLeft="190.033327869574,176.800001074473">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.5666630572745,71.0666675620609"
+              Start="0,0"
+              End="-84.5666630572745,63.5666675620609">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8662546592289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.8662546592289"
+                    Point2="0,28.8662546592289"
+                    Point3="-4,28.8662546592289" />
+                  <mssgle:LineSegment
+                    End="-80.5666630572745,28.8662546592289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.5666630572745,28.8662546592289"
+                    Point2="-84.5666630572745,28.8662546592289"
+                    Point3="-84.5666630572745,32.8662546592289" />
+                  <mssgle:LineSegment
+                    End="-84.5666630572745,63.5666675620609" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-77.5989174661373,33.8662546592289,70.631171875,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinThiSinh.Paths[SBDKhongPhaiNull]"
+          TopLeft="238.566661202908,176.800001074473">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158.766659282314,71.0666675620609"
+              Start="0,0"
+              End="158.766659282314,63.5666675620609">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8662546592289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.8662546592289"
+                    Point2="0,28.8662546592289"
+                    Point3="4,28.8662546592289" />
+                  <mssgle:LineSegment
+                    End="154.766659282314,28.8662546592289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.766659282314,28.8662546592289"
+                    Point2="158.766659282314,28.8662546592289"
+                    Point3="158.766659282314,32.8662546592289" />
+                  <mssgle:LineSegment
+                    End="158.766659282314,63.5666675620609" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="29.377548391157,33.8662546592289,100.0115625,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinThiSinh.Paths[Multicast Output 2]"
+          TopLeft="396.866653884782,289.466668636534">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.733334194289"
+              Start="0,0"
+              End="0,59.233334194289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.233334194289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,21.6166670971445,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinThiSinh.Paths[Excel Source Output]"
+          TopLeft="217.566660937998,79.7333336363899">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.4666674380832"
+              Start="0,0"
+              End="0,47.9666674380832">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.9666674380832" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinThiSinh.Paths[Derived Column Output]"
+          TopLeft="398.416654133135,397.800002830823">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.5999997933707"
+              Start="0,0"
+              End="0,28.0999997933707">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.0999997933707" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,6.04999989668536,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ThongTinThiSinh\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ThongTinThiSinh\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ThongTinTruong">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\ThongTinTruong\Excel Source"
+          TopLeft="114,31" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\ThongTinTruong\Conditional Split"
+          TopLeft="113,126" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\ThongTinTruong\Multicast"
+          TopLeft="36,224" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\ThongTinTruong\Multicast 1"
+          TopLeft="244,228" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\ThongTinTruong\ADO NET Destination"
+          TopLeft="227,332" />
+        <EdgeLayout
+          Id="Package\ThongTinTruong.Paths[Excel Source Output]"
+          TopLeft="186.9,72.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.4"
+              Start="0,0"
+              End="0,45.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinTruong.Paths[NeuMaTruongNull]"
+          TopLeft="189.8,167.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.2,56.4"
+              Start="0,0"
+              End="-94.2,48.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2"
+                    Point2="0,28.2"
+                    Point3="-4,28.2" />
+                  <mssgle:LineSegment
+                    End="-90.2,28.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.2,28.2"
+                    Point2="-94.2,28.2"
+                    Point3="-94.2,32.2" />
+                  <mssgle:LineSegment
+                    End="-94.2,48.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-95.68578125,33.2,97.1715625,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinTruong.Paths[NeuMaTruongKhongNull]"
+          TopLeft="214.066666666667,167.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.9333333333333,60.4"
+              Start="0,0"
+              End="93.9333333333333,52.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5336082474227" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5336082474227"
+                    Point2="0,24.5336082474227"
+                    Point3="4,24.5336082474227" />
+                  <mssgle:LineSegment
+                    End="89.9333333333333,24.5336082474227" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.9333333333333,24.5336082474227"
+                    Point2="93.9333333333333,24.5336082474227"
+                    Point3="93.9333333333333,28.5336082474227" />
+                  <mssgle:LineSegment
+                    End="93.9333333333333,52.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.6191145833334,29.5336082474227,125.1715625,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ThongTinTruong.Paths[Multicast Output 1]"
+          TopLeft="308,269.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.60000000000008,62.4"
+              Start="0,0"
+              End="8.60000000000008,54.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.2"
+                    Point2="0,31.2"
+                    Point3="4,31.2" />
+                  <mssgle:LineSegment
+                    End="4.60000000000008,31.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.60000000000008,31.2"
+                    Point2="8.60000000000008,31.2"
+                    Point3="8.60000000000008,35.2" />
+                  <mssgle:LineSegment
+                    End="8.60000000000008,54.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ThongTinTruong\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ThongTinTruong\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
